@@ -1,12 +1,25 @@
-const Books = (state, action) => {
+const currentState = [
+  {
+    id: 1,
+    title: 'The Hobbit',
+    category: 'Sci-fi',
+  },
+  {
+    id: 2,
+    title: 'Star Wars',
+    category: 'Sci-fi',
+  },
+];
+
+const booksReducer = (state = currentState, action) => {
   switch (action.type) {
     case 'CREATE':
-      return state.push(action.payload);
+      return state;
     case 'DELETE':
-      return state.splice(state.indexof(action.payload), 1);
+      return state;
     default:
       return state;
   }
 };
 
-export default Books;
+export default booksReducer;

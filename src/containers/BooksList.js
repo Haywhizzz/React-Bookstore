@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Book from '../components/Book';
 
-function BooksList() {
+function BooksList({ books }) {
   return (
     <div>
       <table>
@@ -9,10 +11,20 @@ function BooksList() {
           <th>Title</th>
           <th>Category</th>
         </tr>
-      <Book />
+        {books.map((book) => (
+          <Book id={book.id} key={book.id} title={book.title} category={book.category} />
+        ))}
       </table>
     </div>
   );
 }
 
-export default BooksList;
+BooksList.propTypes = {
+  books: PropTypes.objectOf(Array).isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  books: state.booksReducer,
+});
+
+export default connect(mapStateToProps)(BooksList);
