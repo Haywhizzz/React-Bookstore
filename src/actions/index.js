@@ -1,9 +1,9 @@
 export const createBookAction = (book) => ({
-  type: 'CREATE',
+  type: 'CREATE_BOOK',
   payload: book,
 });
 
 export const deleteBookAction = (id) => ({
-  type: 'DELETE',
+  type: 'REMOVE_BOOK',
   payload: id,
 });
