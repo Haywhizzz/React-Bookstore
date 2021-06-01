@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { deleteBookAction } from '../actions/index';
 
 function Book({
   id, title, category, deleteBook,
@@ -23,10 +21,4 @@ Book.propTypes = {
   deleteBook: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = (dispatch) => {
-  const deleteBook = (id) => dispatch(deleteBookAction(id));
-
-  return { deleteBook };
-};
-
-export default connect(null, mapDispatchToProps)(Book);
+export default Book;
