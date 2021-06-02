@@ -30,9 +30,6 @@ const BooksForm = ({ createBook }) => {
         <div className="formdata">
           <input className="form-control theform w-100" onChange={(e) => setFormData({ ...formData, title: e.target.value })} value={formData.title} type="text" id="title" name="title" />
           <select className=" theform form-control" onChange={(e) => setFormData({ ...formData, category: e.target.value })} value={formData.category} name="category" id="category">
-            <option value="" disabled>
-              Category
-            </option>
             {categories.map((category) => (
               <option value={category} key={categories.indexOf(category)}>
                 {category}
