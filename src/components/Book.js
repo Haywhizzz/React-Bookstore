@@ -35,10 +35,10 @@ function Book({
             </p>
           </div>
         </div>
-        <div className="p-3">
+        <div className="p-3 w-50">
           <p>CURRENT CHAPTER</p>
           <p>Chapter 17</p>
-          <button className="btn btn-primary px-3" type="button">Update Progress</button>
+          <button className="btn btn-primary px-3" type="button">UPDATE PROGRESS</button>
         </div>
       </div>
     </div>

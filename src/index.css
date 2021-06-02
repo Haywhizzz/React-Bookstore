@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 150px;
+  margin-right: 50px;
   border-right: grey 1px solid;
   padding-right: 100px;
   gap: 1rem;
@@ -29,7 +29,12 @@ body {
   border-top: lightgray 1px solid;
 }
 
-form {
+.formdata {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.theform {
+  padding: 0.8rem;
 }
