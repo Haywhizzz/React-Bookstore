@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBookAction } from '../actions';
 
+export const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 const BooksForm = ({ createBook }) => {
   const [formData, setFormData] = useState({
     id: Math.floor(Math.random() * 1000),
@@ -20,7 +21,6 @@ const BooksForm = ({ createBook }) => {
     });
   };
 
-  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="title">
