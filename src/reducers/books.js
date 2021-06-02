@@ -6,7 +6,7 @@ const currentState = [
   },
   {
     id: 2,
-    title: 'Star Wars',
+    title: 'Frankenstein',
     category: 'Sci-fi',
   },
 ];
