@@ -1,3 +1,21 @@
+.options {
+  border: none;
+  background-color: transparent;
+  color:rgb(99, 99, 146);
+}
+
+.books {
+  background-color: whitesmoke;
+  border: lightgrey 1px solid;
+}
+
 body {
-  background-color: aquamarine;
+  background-color: rgba(228, 226, 226, 0.527);
+}
+
+.percent {
+  max-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
