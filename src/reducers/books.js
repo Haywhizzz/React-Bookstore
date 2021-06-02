@@ -1,17 +1,4 @@
-const currentState = [
-  {
-    id: 1,
-    title: 'The Hobbit',
-    category: 'Sci-fi',
-  },
-  {
-    id: 2,
-    title: 'Frankenstein',
-    category: 'Sci-fi',
-  },
-];
-
-const booksReducer = (state = currentState, action) => {
+const booksReducer = (state = [], action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
       return [...state, action.payload];

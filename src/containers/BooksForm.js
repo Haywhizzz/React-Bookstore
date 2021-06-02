@@ -22,23 +22,24 @@ const BooksForm = ({ createBook }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="title">
-        Title
-        <input onChange={(e) => setFormData({ ...formData, title: e.target.value })} value={formData.title} type="text" id="title" name="title" />
-      </label>
-      <select onChange={(e) => setFormData({ ...formData, category: e.target.value })} value={formData.category} name="category" id="category">
-        <option value="" disabled>
-          Select Book
-        </option>
-        {categories.map((category) => (
-          <option value={category} key={categories.indexOf(category)}>
-            {category}
-          </option>
-        ))}
-      </select>
-      <button type="submit">Add Book</button>
-    </form>
+    <div className="addbook p-5">
+      <form onSubmit={handleSubmit}>
+        <h4 className="text-muted">
+          ADD NEW BOOK
+        </h4>
+        <div className="formdata">
+          <input className="form-control theform w-100" onChange={(e) => setFormData({ ...formData, title: e.target.value })} value={formData.title} type="text" id="title" name="title" />
+          <select className=" theform form-control" onChange={(e) => setFormData({ ...formData, category: e.target.value })} value={formData.category} name="category" id="category">
+            {categories.map((category) => (
+              <option value={category} key={categories.indexOf(category)}>
+                {category}
+              </option>
+            ))}
+          </select>
+          <button className="theform btn btn-primary" type="submit">Add Book</button>
+        </div>
+      </form>
+    </div>
   );
 };
 

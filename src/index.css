@@ -1,3 +1,40 @@
+.options {
+  border: none;
+  background-color: transparent;
+  color: rgb(99, 99, 146);
+}
+
+.books {
+  background-color: white;
+  border: lightgrey 1px solid;
+  border-bottom: lightgray 1px solid;
+}
+
 body {
-  background-color: aquamarine;
+  background-color: rgba(228, 226, 226, 0.527);
+}
+
+.percent {
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  border-right: grey 1px solid;
+  padding-right: 100px;
+  gap: 1rem;
+}
+
+.addbook {
+  border-top: lightgray 1px solid;
+}
+
+.formdata {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.theform {
+  padding: 0.8rem;
 }

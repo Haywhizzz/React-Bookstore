@@ -21,12 +21,25 @@ function BooksList({
   };
   return (
     <div>
-      <table>
-        <tr>
-          <th>Id</th>
-          <th>Title</th>
-          <th>Category</th>
-        </tr>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <h1 className="navbar-brand text-primary mx-5 font-weight-bold">Bookstore CMS</h1>
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item active">
+              <p className="nav-link pt-3 text-mute">BOOKS</p>
+            </li>
+            <li className="nav-item">
+              <p className="nav-link pt-3 text-muted">CATEGORIES</p>
+            </li>
+            <li className="nav-item dropdown">
+              <p className="nav-link pt-3" id="navbarDropdownMenuLink" aria-expanded="false">
+                <CategoryFilter onSelect={handleSelect} />
+              </p>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div>
         {filteredBooks().map((book) => (
           <Book
             id={book.id}
@@ -36,8 +49,7 @@ function BooksList({
             deleteBook={handleDelete}
           />
         ))}
-      </table>
-      <CategoryFilter onSelect={handleSelect} />
+      </div>
     </div>
   );
 }
