@@ -5,8 +5,9 @@
 }
 
 .books {
-  background-color: whitesmoke;
+  background-color: white;
   border: lightgrey 1px solid;
+  border-bottom: lightgray 1px solid;
 }
 
 body {
@@ -14,8 +15,21 @@ body {
 }
 
 .percent {
-  max-width: 100px;
+  max-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 150px;
+  border-right: grey 1px solid;
+  padding-right: 100px;
+  gap: 1rem;
+}
+
+.addbook {
+  border-top: lightgray 1px solid;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

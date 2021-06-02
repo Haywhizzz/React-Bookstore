@@ -22,23 +22,27 @@ const BooksForm = ({ createBook }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="title">
-        Title
-        <input onChange={(e) => setFormData({ ...formData, title: e.target.value })} value={formData.title} type="text" id="title" name="title" />
-      </label>
-      <select onChange={(e) => setFormData({ ...formData, category: e.target.value })} value={formData.category} name="category" id="category">
-        <option value="" disabled>
-          Select Book
-        </option>
-        {categories.map((category) => (
-          <option value={category} key={categories.indexOf(category)}>
-            {category}
+    <div className="addbook">
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="title">
+            Title
+            <input className="form-control w-100" onChange={(e) => setFormData({ ...formData, title: e.target.value })} value={formData.title} type="text" id="title" name="title" />
+          </label>
+        </div>
+        <select className="form-control" onChange={(e) => setFormData({ ...formData, category: e.target.value })} value={formData.category} name="category" id="category">
+          <option value="" disabled>
+            Category
           </option>
-        ))}
-      </select>
-      <button type="submit">Add Book</button>
-    </form>
+          {categories.map((category) => (
+            <option value={category} key={categories.indexOf(category)}>
+              {category}
+            </option>
+          ))}
+        </select>
+        <button type="submit">Add Book</button>
+      </form>
+    </div>
   );
 };
 

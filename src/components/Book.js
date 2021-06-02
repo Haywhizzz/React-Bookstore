@@ -13,7 +13,6 @@ function Book({
         <h6 className="text-muted">{category}</h6>
         <h4 className="">{title}</h4>
         <div>
-
           <button className="options" type="button">Comments</button>
           |
           <button onClick={() => deleteBook(id)} className="options" type="button">Remove</button>
@@ -22,9 +21,19 @@ function Book({
         </div>
 
       </div>
-      <div className="d-flex">
-        <div className="percent w-25">
-          <CircularProgressbar value={percentage} text={`${percentage}%`} />
+      <div className="d-flex justify-content-end">
+        <div className="percent w-50">
+          <div className="mr-4">
+            <CircularProgressbar value={percentage} />
+          </div>
+          <div>
+            <h1>
+              66%
+            </h1>
+            <p className="text-muted">
+              Completed
+            </p>
+          </div>
         </div>
         <div className="p-3">
           <p>CURRENT CHAPTER</p>

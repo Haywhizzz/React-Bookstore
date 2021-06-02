@@ -6,6 +6,11 @@ const currentState = [
   },
   {
     id: 2,
+    title: 'Handmaid Tale',
+    category: 'Sci-fi',
+  },
+  {
+    id: 2,
     title: 'Frankenstein',
     category: 'Sci-fi',
   },
